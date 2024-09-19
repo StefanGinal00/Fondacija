@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Stilovi za dugmad */
+.buttons-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: 42%;
+  gap: 10px; /* Smanjen razmak između dugmadi */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.reset-button, .submit-button {
+  font-size: 14px; /* Smanjena veličina fonta za mobilne ekrane */
+  padding: 8px 20px; /* Smanjen padding */
+  border-radius: 50px;
+  border: 2px solid #b0b0b0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button {
+  color: #333;
+  border-color: #c0c0c0;
+  font-weight: 500;
+}
+
+.submit-button {
+  background-color: #d0d0d0;
   color: white;
+  border-color: #d0d0d0;
 }
 
-.App-link {
-  color: #61dafb;
+.submit-button:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+  border: 3px solid white; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.submit-button:not(:disabled) {
+  background-color: #28a745;
+  border-color: #ffffff;
+  cursor: pointer;
+  border: 3px solid;
+}
+
+/* Stilizacija za @media screen širine do 320px */
+@media (max-width: 320px) {
+
+  .header-tekst{
+    width: 30%;
+    font-size: 3em;
   }
-  to {
-    transform: rotate(360deg);
+
+
+  .App-logo {
+    width: 100%; /* Smanji logo da se uklopi u ekran */
+    margin-bottom: 10px;
+  }
+
+  .text-overlay {
+    padding: 10px; /* Smanji padding za manji ekran */
+    font-size: 12px; /* Smanji veličinu fonta */
+    line-height: 1.2;
+  }
+
+  .track-container {
+    margin-bottom: 15px;
+  }
+
+  .track-text {
+    font-size: 12px; /* Smanjena veličina fonta za naslove staza */
+  }
+
+  .buttons-container {
+    flex-direction: column; /* Postavi dugmad u kolonu za manji ekran */
+    gap: 5px; /* Smanji razmak između dugmadi */
+    align-items: center;
+  }
+
+  .reset-button, .submit-button {
+    font-size: 12px; /* Još manje dugme za mali ekran */
+    padding: 8px 16px; /* Smanjen padding da dugmad budu manja */
+    width: 100%; /* Dugmad zauzimaju punu širinu */
+    max-width: 280px; /* Ograniči maksimalnu širinu dugmadi */
   }
 }

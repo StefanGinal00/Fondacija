@@ -1,0 +1,149 @@
+@charset "UTF-8";
+.root, html, body {
+  background-color: rgb(216, 239, 252);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.App-logo {
+  pointer-events: none;
+  position: relative; /* Add relative positioning */
+}
+
+.App-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%; /* Adjust this value to control the gradient height */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgb(216, 239, 252) 100%);
+  z-index: 0; /* Ensure the gradient is below the image */
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 25px; /* Pozicija teksta unutar slike, 20px od dna */
+  left: 35%;
+  transform: translateX(-50%);
+  color: #747373; /* Tamna boja za tekst */
+  padding: 10px 20px;
+  border-radius: 8px;
+  max-width: 50%; /* Prilagodi širinu teksta */
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@font-face {
+  font-family: "Pixilate Lango Px Bold";
+  src: url("./fonts/Pixilate_Lango_Px_Bold.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Pixilate Lango Px Fat";
+  src: url("./fonts/Pixilate_Lango_Px_Fat.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Pixilate Lango Px Thin";
+  src: url("./fonts/Pixilate_Lango_Px_Thin.otf") format("opentype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Pixilate Lango Px";
+  src: url("./fonts/Pixilate_Lango_Px.otf") format("opentype");
+  font-weight: 200;
+}
+body {
+  font-family: "Pixilate Lango Px Fat", sans-serif;
+}
+
+.sleigh {
+  top: 15px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 70px;
+  transition: left 0.1s ease-in-out;
+  cursor: grab;
+}
+
+.track-container {
+  margin-left: 20px;
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.track {
+  position: relative;
+  height: 100px;
+  width: 1000px;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+
+.track-labels {
+  position: absolute;
+  top: -50px;
+  left: 880px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(0, 255, 255);
+  padding: 2px 5px;
+  font-size: 32px;
+  border-radius: 3px;
+  z-index: 50;
+}
+
+.track-label {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.track-text {
+  position: absolute;
+  bottom: 5px;
+  left: 25%;
+  color: rgb(2, 24, 133);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.track-buttons {
+  position: absolute;
+  top: 60px; /* Prilagodi visinu tako da dugmad budu ispod sanki */
+  left: 60px; /* Prilagodi horizontalno poravnanje */
+  display: flex;
+  gap: 10px; /* Razmak između dugmadi */
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button img {
+  width: 40px; /* Prilagodi veličinu slika */
+  height: auto;
+}/*# sourceMappingURL=sanke.css.map */
